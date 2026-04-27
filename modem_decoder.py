@@ -45,4 +45,5 @@ message_bits = decode(y,samp_per_bit,sample_rate)
         with 8 bits of data, 8-Bit ASCII, little endian
 """
 message = "".join(decode_bits(message_bits))
-print(message)
+with open("MESSAGE.txt", 'w') as f:
+    print(message, file=f)
